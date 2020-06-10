@@ -5,5 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
+    <PackageReference Include="SatelliteAssemblyTest" Version="1.0.1" />
+    <PackageReference Include="SatelliteAssemblyTest.de" Version="1.0.1" />
   </ItemGroup>
 </Project>

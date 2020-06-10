@@ -1,4 +1,5 @@
 ﻿using System;
+using SatelliteAssemblyTest;
 using Xamarin.Forms;
 
 namespace HelloForms
@@ -8,6 +9,8 @@ namespace HelloForms
         public MainPage()
         {
             InitializeComponent();
+
+            label.Text = new TextGetter().GetText();
         }
     }
 }
