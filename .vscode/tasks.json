@@ -1,0 +1,12 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Debug HelloAndroid",
+            "type": "shell",
+            "command": "dotnet build HelloAndroid/HelloAndroid.csproj -t:Install,_Run -p:AndroidAttachDebugger=true"
+        },
+    ]
+}
