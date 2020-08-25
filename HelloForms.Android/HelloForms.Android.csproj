@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.Android.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RuntimeIdentifier>android.21-x86</RuntimeIdentifier>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
@@ -14,11 +14,11 @@
       it is probably same issue as here: https://github.com/mono/linker/issues/1139
       these should not be needed once we have the AndroidX packages targetting net5
     -->
-    <PackageReference Include="System.CodeDom" Version="5.0.0-preview.3.20214.6" />
-    <PackageReference Include="System.Diagnostics.EventLog" Version="5.0.0-preview.3.20214.6" />
-    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="5.0.0-preview.3.20214.6" />
-    <PackageReference Include="System.IO.Ports" Version="5.0.0-preview.3.20214.6" />
-    <PackageReference Include="System.Security.Permissions" Version="5.0.0-preview.3.20214.6" />
-    <PackageReference Include="System.Threading.AccessControl" Version="5.0.0-preview.3.20214.6" />
+    <PackageReference Include="System.CodeDom" Version="6.0.0-alpha.1.20424.8" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="6.0.0-alpha.1.20424.8" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="6.0.0-alpha.1.20424.8" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0-alpha.1.20424.8" />
+    <PackageReference Include="System.Security.Permissions" Version="6.0.0-alpha.1.20424.8" />
+    <PackageReference Include="System.Threading.AccessControl" Version="6.0.0-alpha.1.20424.8" />
   </ItemGroup>
 </Project>
