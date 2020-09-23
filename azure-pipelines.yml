@@ -19,9 +19,6 @@ jobs:
     - bash: |
         set -x
 
-        cat /Users/runner/Library/Preferences/Xamarin/Settings.plist
-        /usr/libexec/PlistBuddy -c "set :AppleSdkRoot /Applications/Xcode.app" ~/Library/Preferences/Xamarin/Settings.plist
-        cat /Users/runner/Library/Preferences/Xamarin/Settings.plist
         xcode-select -p
         xcrun xcode-select -p
         xcodebuild -checkFirstLaunchStatus
