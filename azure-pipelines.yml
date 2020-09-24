@@ -42,8 +42,7 @@ jobs:
       displayName: diagnostics
 
     - bash: |
-        dotnet build net6-samples.sln -c Debug -bl:$(LogDirectory)/Debug.binlog &&
-        dotnet build net6-samples.sln -c Release -bl:$(LogDirectory)/Release.binlog
+        dotnet build net6-samples.sln -c Debug -bl:$(LogDirectory)/Debug.binlog
       displayName: build samples
 
     - task: CopyFiles@2
