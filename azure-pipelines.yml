@@ -25,6 +25,7 @@ jobs:
         xcrun xcodebuild -checkFirstLaunchStatus
         clang -v
         xcrun clang -v
+        install_name_tool --help
         exit 0
       displayName: diagnostics
 
