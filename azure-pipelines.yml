@@ -20,7 +20,6 @@ jobs:
         set -x
         xcrun -k
         xcrun clang -v
-        xcrun install_name_tool --help
         exit 0
       displayName: diagnostics
 
