@@ -20,7 +20,6 @@ jobs:
         set -x
         ls -la /Applications
         sudo xcode-select -s /Applications/Xcode.app
-        /usr/libexec/PlistBuddy -c "set :AppleSdkRoot /Applications/Xcode.app" ~/Library/Preferences/Xamarin/Settings.plist
         cat /Users/runner/Library/Preferences/Xamarin/Settings.plist
         xcode-select -p
         xcrun xcode-select -p
