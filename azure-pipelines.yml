@@ -19,7 +19,6 @@ jobs:
     - bash: |
         set -x
         ls -la /Applications
-        DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun clang -v
         sudo xcode-select -s /Applications/Xcode.app
         cat /Users/runner/Library/Preferences/Xamarin/Settings.plist
         /usr/libexec/PlistBuddy -c "set :AppleSdkRoot /Applications/Xcode.app" ~/Library/Preferences/Xamarin/Settings.plist
