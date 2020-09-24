@@ -33,7 +33,6 @@ jobs:
         xcode-select -p
         xcrun xcode-select -p
         xcodebuild -checkFirstLaunchStatus
-        xcrun xcodebuild -checkFirstLaunchStatus
         exit 0
       displayName: diagnostics
 
