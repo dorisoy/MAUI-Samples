@@ -29,7 +29,6 @@ jobs:
         sudo xcode-select -s /Applications/Xcode.app
         cat /Users/runner/Library/Preferences/Xamarin/Settings.plist
         /usr/libexec/PlistBuddy -c "set :AppleSdkRoot /Applications/Xcode.app" ~/Library/Preferences/Xamarin/Settings.plist
-        cat /Users/runner/Library/Preferences/Xamarin/Settings.plist
         exit 0
       displayName: diagnostics
 
