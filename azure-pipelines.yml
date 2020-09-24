@@ -19,7 +19,6 @@ jobs:
     - bash: |
         set -x
         xcrun -k
-        xcrun clang -v
         exit 0
       displayName: diagnostics
 
