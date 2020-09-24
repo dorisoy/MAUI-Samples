@@ -21,7 +21,6 @@ jobs:
         ls -la /Applications
         xcode-select -p
         xcrun xcode-select -p
-        xcodebuild -checkFirstLaunchStatus
         DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun clang -v
         install_name_tool --help
         exit 0
