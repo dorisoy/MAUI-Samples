@@ -19,7 +19,7 @@ jobs:
     - bash: |
         set -x
         sudo xcode-select -s /Applications/Xcode.app
-        DEVELOPER_DIR=/Applications/Xcode.app xcrun clang -v
+        xcrun clang -v
         install_name_tool --help
         xcrun --kill-cache
         exit 0
