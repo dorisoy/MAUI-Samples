@@ -18,7 +18,6 @@ jobs:
 
     - bash: |
         set -x
-        sudo xcode-select -s /Applications/Xcode_11.7.app
         mkdir -p ~/Library/Preferences/Xamarin
         /usr/libexec/PlistBuddy -c "add :AppleSdkRoot string /Applications/Xcode_11.7.app" ~/Library/Preferences/Xamarin/Settings.plist
         cat ~/Library/Preferences/Xamarin/Settings.plist
