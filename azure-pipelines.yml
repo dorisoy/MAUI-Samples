@@ -20,7 +20,6 @@ jobs:
         set -x
         ls -la /Applications
         sudo xcode-select -s /Applications/Xcode.app
-        xcodebuild -checkFirstLaunchStatus
         xcrun xcodebuild -checkFirstLaunchStatus
         clang -v
         xcrun clang -v
