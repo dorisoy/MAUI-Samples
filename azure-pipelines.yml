@@ -20,7 +20,6 @@ jobs:
         set -x
         ls -la /Applications
         sudo xcode-select -s /Applications/Xcode.app
-        xcrun clang -v
         DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun clang -v
         install_name_tool --help
         exit 0
