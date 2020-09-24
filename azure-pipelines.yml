@@ -35,7 +35,6 @@ jobs:
         xcodebuild -checkFirstLaunchStatus
         xcrun xcodebuild -checkFirstLaunchStatus
         clang -v
-        xcrun clang -v
         exit 0
       displayName: diagnostics
 
