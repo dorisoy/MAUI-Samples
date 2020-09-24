@@ -18,7 +18,6 @@ jobs:
 
     - bash: |
         set -x
-        sudo xcode-select -s /Applications/Xcode.app
         xcrun clang -v
         xcrun install_name_tool --help
         exit 0
