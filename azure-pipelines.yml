@@ -20,7 +20,7 @@ jobs:
         set -x
         sudo xcode-select -s /Applications/Xcode.app
         xcrun clang -v
-        install_name_tool --help
+        xcrun install_name_tool --help
         exit 0
       displayName: diagnostics
 
