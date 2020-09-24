@@ -19,7 +19,7 @@ jobs:
     - bash: |
         set -x
         mkdir -p ~/Library/Preferences/Xamarin
-        /usr/libexec/PlistBuddy -c "add :AppleSdkRoot string /Applications/Xcode_11.7.app" ~/Library/Preferences/Xamarin/Settings.plist
+        /usr/libexec/PlistBuddy -c "add :AppleSdkRoot string $(dirname $(dirname $(xcode-select -p)))" ~/Library/Preferences/Xamarin/Settings.plist
         cat ~/Library/Preferences/Xamarin/Settings.plist
         exit 0
       displayName: diagnostics
