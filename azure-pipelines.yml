@@ -21,6 +21,7 @@ jobs:
         sudo xcode-select -s /Applications/Xcode.app
         xcrun clang -v
         xcrun install_name_tool --help
+        xcrun -k
         exit 0
       displayName: diagnostics
 
