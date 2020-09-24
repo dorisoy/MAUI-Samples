@@ -20,12 +20,11 @@ jobs:
         set -x
         mkdir -p ~/Library/Preferences/Xamarin
         /usr/libexec/PlistBuddy -c "add :AppleSdkRoot string $(dirname $(dirname $(xcode-select -p)))" ~/Library/Preferences/Xamarin/Settings.plist
-        cat ~/Library/Preferences/Xamarin/Settings.plist
-        exit 0
-      displayName: diagnostics
+      displayName: configure vsmac xcode
 
     - bash: |
-        dotnet build net6-samples.sln -c Debug -bl:$(LogDirectory)/Debug.binlog
+        dotnet build net6-samples.sln -c Debug -bl:$(LogDirectory)/Debug.binlog &&
+        dotnet build net6-samples.sln -c Release -bl:$(LogDirectory)/Release.binlog
       displayName: build samples
 
     - task: CopyFiles@2
