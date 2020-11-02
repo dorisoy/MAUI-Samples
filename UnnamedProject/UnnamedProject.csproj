@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<RootNamespace>UnnamedProject</RootNamespace>
+		<AssemblyName>UnnamedProject</AssemblyName>
+		<TargetFramework>net5.0-android</TargetFramework>
+		<EnableDefaultItems>false</EnableDefaultItems>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<OutputType>Exe</OutputType>
+		<XamarinAndroidSupportSkipVerifyVersions>True</XamarinAndroidSupportSkipVerifyVersions>
+		<AndroidUseAapt2>True</AndroidUseAapt2>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+		<OutputPath>bin\Debug</OutputPath>
+		<IntermediateOutputPath>obj\Debug</IntermediateOutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<OutputPath>bin\Release</OutputPath>
+		<IntermediateOutputPath>obj\Release</IntermediateOutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Library1\Library1.csproj" >
+			<Project>{eb9e289b-f5aa-4609-8f74-f779808c1c1a}</Project>
+			<Name>UnnamedReference</Name>
+		</ProjectReference>
+		<ProjectReference Include="..\Library2\Library2.csproj" >
+			<Project>{064978c6-c7d2-44a9-9711-ab287e28c138}</Project>
+			<Name>UnnamedReference</Name>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Properties\AndroidManifest.xml" 		/>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="Properties\AssemblyInfo.cs" 		/>
+		<Compile Include="Resources\Resource.designer.cs" 		/>
+		<Compile Include="MainActivity.cs" 		/>
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidResource Include="Resources\drawable-mdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\drawable-hdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\drawable-xhdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\layout\Main.axml" 		/>
+		<AndroidResource Include="Resources\values\Strings.xml" 		/>
+	</ItemGroup>
+
+</Project>

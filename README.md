@@ -2,6 +2,12 @@
 
 _This is an *early* preview of Xamarin in .NET 6 **not for production use**. Expect breaking changes as Xamarin is still in development for .NET 6._
 
+This reproduces a hang with `dotnet build` by running:
+
+    dotnet build -t:Install .\UnnamedProject\UnnamedProject.csproj -v:diag
+
+The hang goes away if I remove the `-v:diag` call or change our `<FastDeploy/>` MSBuild task, so that `BuildEngine.LogCustomEvent()` is no longer called.
+
 This repo requires a specific build of .NET 5 rtm:
 
 * Windows: [dotnet-sdk-5.0.100-rtm.20509.5-win-x64.exe](https://dotnetcli.azureedge.net/dotnet/Sdk/5.0.100-rtm.20509.5/dotnet-sdk-5.0.100-rtm.20509.5-win-x64.exe)

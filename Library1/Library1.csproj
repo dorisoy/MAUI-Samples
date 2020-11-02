@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<RootNamespace>Library1</RootNamespace>
+		<AssemblyName>Library1</AssemblyName>
+		<TargetFramework>net5.0-android</TargetFramework>
+		<EnableDefaultItems>false</EnableDefaultItems>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<OutputType>Library</OutputType>
+		<AndroidUseAapt2>True</AndroidUseAapt2>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+		<OutputPath>bin\Debug</OutputPath>
+		<IntermediateOutputPath>obj\Debug</IntermediateOutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<OutputPath>bin\Release</OutputPath>
+		<IntermediateOutputPath>obj\Release</IntermediateOutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="Properties\AssemblyInfo.cs" 		/>
+		<Compile Include="Resources\Resource.designer.cs" 		/>
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidResource Include="Resources\drawable-mdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\drawable-hdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\drawable-xhdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" 		/>
+		<AndroidResource Include="Resources\values\Strings.xml" 		/>
+		<AndroidResource Include="Resources\values\strings2.xml" 		/>
+	</ItemGroup>
+
+</Project>
