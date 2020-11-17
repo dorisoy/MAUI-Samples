@@ -1,0 +1,7 @@
+<linker>
+  <assembly fullname="Xamarin.Forms.Platform.Android">
+    <type fullname="Xamarin.Forms.Platform.Android.ResourcesProvider">
+      <method name=".ctor" />
+    </type>
+  </assembly>
+</linker>

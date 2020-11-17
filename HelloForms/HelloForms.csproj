@@ -6,5 +6,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" GeneratePathProperty="true" />
+    <!--
+      Workaround NRE here:
+      https://github.com/xamarin/Xamarin.Forms/blob/4e704d871f3379b58c6efa66b9942fb41df4de51/Xamarin.Forms.Core/Application.cs#L37
+    -->
+    <TrimmerRootDescriptor Include="TrimmerRootDescriptor.xml" />
   </ItemGroup>
 </Project>
