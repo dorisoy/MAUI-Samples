@@ -8,6 +8,9 @@ namespace HelloForms
         public MainPage()
         {
             InitializeComponent();
+
+            var hello = DependencyService.Get<IHelloService>();
+            label.Text = hello.Hello();
         }
     }
 }

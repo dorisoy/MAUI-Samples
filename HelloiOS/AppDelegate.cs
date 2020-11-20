@@ -25,7 +25,8 @@ namespace HelloiOS
             {
                 BackgroundColor = UIColor.White,
                 TextAlignment = UITextAlignment.Center,
-                Text = "Hello, .NET 6!"
+                Text = "Hello, .NET 6!",
+                Font = UIFont.SystemFontOfSize (32),
             });
             Window.RootViewController = vc;
 
