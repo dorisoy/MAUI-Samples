@@ -2,6 +2,7 @@
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
+using System;
 
 namespace HelloAndroid
 {
@@ -14,6 +15,18 @@ namespace HelloAndroid
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
+            var button = FindViewById(Resource.Id.button1);
+
+            button.Click += OnButtonClicked;
+        }
+
+        int count = 0;
+
+        private void OnButtonClicked(object sender, EventArgs e)
+        {
+            count++;
+            ((Button)sender).Text = $"Clicked {count} times";
         }
     }
 }

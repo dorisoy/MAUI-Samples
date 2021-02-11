@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Hello Android</string>
     <string name="app_text">Hello, .NET 6!</string>
+	<string name="clickhere">Click Here</string>
 </resources>
