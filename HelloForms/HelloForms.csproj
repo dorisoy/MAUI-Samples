@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
-    <RuntimeIdentifier Condition=" '$(TargetFramework)' == 'net6.0-ios' ">ios-x64</RuntimeIdentifier>
+    <TargetFramework>net6.0-android</TargetFramework>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" GeneratePathProperty="true" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1931" GeneratePathProperty="true" />
   </ItemGroup>
 </Project>
