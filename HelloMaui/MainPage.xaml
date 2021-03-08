@@ -1,24 +1,94 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelloMaui.MainPage"
-             BackgroundColor="White">
+             BackgroundColor="#F24D16">
 
-    <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#F24D16</Color>
+            <Color x:Key="SecondaryColor">#FFFCE6</Color>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}"/>
+            </Style>
 
-        <Label Text="Welcome to .NET MAUI!" HorizontalOptions="CenterAndExpand" />
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}"/>
+                <Setter Property="FontSize" Value="36"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <Label Text="This is just a label!" TextColor="Black" HorizontalOptions="CenterAndExpand" />
+    
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-            <Label Text="&#xf388;" FontFamily="IonIcons" TextColor="Red" FontSize="20" />
-            <Label Text="&#xf388;" FontFamily="IonIcons" TextColor="Red" FontSize="20" />
-            <Label Text="&#xf388;" FontFamily="IonIcons" TextColor="Red" FontSize="20" />
-        </StackLayout>
+        <Grid BackgroundColor="Red"
+            RowDefinitions="2*,*,*,*,*,*"
+            ColumnDefinitions="*,*,*,*">
+            <Label x:Name="CurrentCalculation"
+                FontSize="22"
+                TextColor="{DynamicResource SecondaryColor}"
+                Grid.ColumnSpan="4"
+                Text=""
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                Grid.Row="0"/>
+                <Button Text="C" Grid.Row="1" Grid.Column="0"
+               Clicked="OnClear" />
 
-        <Button Text="Click Me!" Clicked="OnButtonClicked" />
+            <Label x:Name="resultText"
+               FontSize="64" 
+               Text="0"
+                HorizontalTextAlignment="End"
+               VerticalTextAlignment="End"
+              Grid.ColumnSpan="4" />
 
-        <Entry x:Name="entry" Text="" />
+            <Button Text="+/-" Grid.Row="1" Grid.Column="1"
+            FontSize="36"
+                Clicked="OnNegative" />
+            <Button Text="%" Grid.Row="1" Grid.Column="2"
+                Clicked="OnPercentage" />
 
-    </StackLayout>
+            <Button Text="7" Grid.Row="2" Grid.Column="0"
+                Clicked="OnSelectNumber" />
+            <Button Text="8" Grid.Row="2" Grid.Column="1"
+                Clicked="OnSelectNumber" />
+            <Button Text="9" Grid.Row="2" Grid.Column="2"
+                Clicked="OnSelectNumber" />
+
+            <Button Text="4" Grid.Row="3" Grid.Column="0"
+                Clicked="OnSelectNumber" />
+            <Button Text="5" Grid.Row="3" Grid.Column="1"
+                Clicked="OnSelectNumber" />
+            <Button Text="6" Grid.Row="3" Grid.Column="2"
+                Clicked="OnSelectNumber" />
+
+            <Button Text="1" Grid.Row="4" Grid.Column="0"
+                Clicked="OnSelectNumber" />
+            <Button Text="2" Grid.Row="4" Grid.Column="1"
+                Clicked="OnSelectNumber" />
+            <Button Text="3" Grid.Row="4" Grid.Column="2"
+                Clicked="OnSelectNumber" />
+
+            <Button Text="00" Grid.Row="5" Grid.Column="0" 
+                Clicked="OnSelectNumber" />
+            <Button Text="0" Grid.Row="5" Grid.Column="1" 
+                Clicked="OnSelectNumber" />
+            <Button Text="." Grid.Row="5" Grid.Column="2" 
+                Clicked="OnSelectNumber" />
+
+            <Button Text="÷" Grid.Row="1" Grid.Column="3"
+                Clicked="OnSelectOperator" />
+            <Button Text="×" Grid.Row="2" Grid.Column="3"
+                Clicked="OnSelectOperator" />
+            <Button Text="-" Grid.Row="3" Grid.Column="3"
+                Clicked="OnSelectOperator" />
+            <Button Text="+" Grid.Row="4" Grid.Column="3"
+                Clicked="OnSelectOperator" />
+
+
+
+            <Button Text="=" Grid.Row="5" Grid.Column="3" 
+                Clicked="OnCalculate" />
+        </Grid>
 
 </ContentPage>

@@ -5,7 +5,7 @@
     <OutputType>Exe</OutputType>
     <SingleProject>true</SingleProject>
     <ApplicationId>com.microsoft.hellomaui</ApplicationId>
-    <ApplicationTitle>MAUI</ApplicationTitle>
+    <ApplicationTitle>.NET MAUI</ApplicationTitle>
     <ApplicationVersion>1.0</ApplicationVersion>
     <AndroidVersionCode>1</AndroidVersionCode>
     <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net6.0-ios'">ios-x64</RuntimeIdentifier>
