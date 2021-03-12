@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Xaml;
+using HelloMaui.Common.Styles;
+
 
 namespace HelloMaui
 {
@@ -13,6 +15,8 @@ namespace HelloMaui
 		public MainPage()
 		{
 			InitializeComponent();
+
+            Application.Current.Resources = new LavaTheme();
 		}
 
 		public IView View
