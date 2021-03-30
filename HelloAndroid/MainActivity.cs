@@ -26,14 +26,8 @@ namespace HelloAndroid
 
         private void OnButtonClicked(object sender, EventArgs e)
         {
-            Increment();
+            count++;
             ((Button)sender).Text = $"Clicked {count} times";
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        private void Increment()
-        {
-            count+=1;
         }
     }
 }
