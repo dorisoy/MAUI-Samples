@@ -4,7 +4,7 @@ _This is an *early* preview of Xamarin in .NET 6 **not for production use**. Exp
 
 This repo requires a specific build of .NET 6:
 
-* Windows: [dotnet-sdk-6.0.100-preview.1.21103.13-win-x64.exe](https://dotnetcli.azureedge.net/dotnet/Sdk/6.0.100-preview.1.21103.13/dotnet-sdk-6.0.100-preview.1.21103.13-win-x64.exe)
+* Windows: [dotnet-sdk-6.0.100-preview.3.21180.8-win-x64.exe](https://dotnetcli.azureedge.net/dotnet/Sdk/6.0.100-preview.3.21180.8/dotnet-sdk-6.0.100-preview.3.21180.8-win-x64.exe)
 * macOS: [dotnet-sdk-6.0.100-preview.1.21103.13-osx-x64.pkg](https://dotnetcli.azureedge.net/dotnet/Sdk/6.0.100-preview.1.21103.13/dotnet-sdk-6.0.100-preview.1.21103.13-osx-x64.pkg)
 
 You will also need to install builds of the iOS and Android workloads:

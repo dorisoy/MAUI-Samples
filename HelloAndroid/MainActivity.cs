@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Widget;
 using System;
+using System.Runtime.CompilerServices;
 
 namespace HelloAndroid
 {
@@ -25,8 +26,14 @@ namespace HelloAndroid
 
         private void OnButtonClicked(object sender, EventArgs e)
         {
-            count++;
+            Increment();
             ((Button)sender).Text = $"Clicked {count} times";
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private void Increment()
+        {
+            count+=1;
         }
     }
 }
