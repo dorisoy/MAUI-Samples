@@ -2,6 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.LifecycleEvents;
+using Microsoft.AspNetCore.Components.WebView.Maui;
 
 namespace HelloMaui
 {
@@ -11,6 +12,7 @@ namespace HelloMaui
 		{
 			appBuilder
 				.UseFormsCompatibility()
+				.RegisterBlazorMauiWebView()
 				.UseMauiApp<App>()
 				.ConfigureFonts(fonts => {
 					fonts.AddFont("ionicons.ttf", "IonIcons");
