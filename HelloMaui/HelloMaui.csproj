@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFrameworks>net6.0-ios;net6.0-android</TargetFrameworks>
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('osx')) Or Exists('$(MSBuildExtensionsPath)..\..\packs\Microsoft.MacCatalyst.Sdk')">$(TargetFrameworks);net6.0-maccatalyst</TargetFrameworks>
@@ -11,9 +11,28 @@
     <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net6.0-ios'">iossimulator-x64</RuntimeIdentifier>
     <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">maccatalyst-x64</RuntimeIdentifier>
     <InvariantGlobalization Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">true</InvariantGlobalization>
+    <EnableDefaultCssItems>false</EnableDefaultCssItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="**\*.razor" />
+  </ItemGroup>
+  <ItemGroup>
+    <RazorComponent Include="**\*.razor" />
+  </ItemGroup>
+
+<ItemGroup>
+  <Content Remove="wwwroot\**\*" />
+</ItemGroup>
+<ItemGroup>
+  <None Include="wwwroot\**\*">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.4.462" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="0.0.1-alpha1" />
   </ItemGroup>
   <ItemGroup>
     <MauiImage Include="Resources\AppIcons\appicon.svg" ForegroundFile="Resources\AppIcons\appiconfg.svg" IsAppIcon="true" />

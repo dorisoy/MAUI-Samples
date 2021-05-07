@@ -2,6 +2,9 @@
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Xaml;
+using Microsoft.AspNetCore.Components.WebView.Maui;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HelloMaui
 {
@@ -10,15 +13,12 @@ namespace HelloMaui
 	{
 		public MainPage()
 		{
+	       // Configure services
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddBlazorWebView();
+            Resources.Add("services", serviceCollection.BuildServiceProvider());
+
 			InitializeComponent();
-		}
-
-		int count = 0;
-
-		private void OnButtonClicked(object sender, EventArgs e)
-		{
-			count++;
-			CounterLabel.Text = $"You clicked {count} times!";
 		}
 	}
 }
