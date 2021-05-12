@@ -15,7 +15,7 @@ namespace HelloMaui
 		{
 			appBuilder
 				.UseFormsCompatibility()
-				.RegisterBlazorMauiWebView()
+				.RegisterBlazorMauiWebView(typeof(Startup).Assembly)
 				.UseMauiApp<App>()
 				.ConfigureFonts(fonts => {
 					fonts.AddFont("ionicons.ttf", "IonIcons");
@@ -30,22 +30,12 @@ namespace HelloMaui
 					#endif
 				});
 
-			appBuilder.UseServiceProviderFactory(new DIExtensionsServiceProviderFactory()); // Blazor requires service scopes, which are supported only with Microsoft.Extensions.DependencyInjection
+			appBuilder.UseMicrosoftExtensionsServiceProviderFactory(); // Blazor requires service scopes, which are supported only with Microsoft.Extensions.DependencyInjection
 			appBuilder
 				.ConfigureServices(services =>
 				{
 					services.AddBlazorWebView();
 				});
 		}
-
-		// To use the Microsoft.Extensions.DependencyInjection ServiceCollection and not the MAUI one
-		class DIExtensionsServiceProviderFactory : IServiceProviderFactory<ServiceCollection>
-		{
-			public ServiceCollection CreateBuilder(IServiceCollection services)
-				=> new ServiceCollection { services };
-
-			public IServiceProvider CreateServiceProvider(ServiceCollection containerBuilder)
-				=> containerBuilder.BuildServiceProvider();
-		}	
 	}
 }

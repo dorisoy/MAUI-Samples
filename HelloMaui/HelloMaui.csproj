@@ -15,32 +15,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AvailableItemName Include="RazorComponent" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="**\*.razor" />
-  </ItemGroup>
-  <ItemGroup>
-    <RazorComponent Include="**\*.razor" />
-  </ItemGroup>
-
-<ItemGroup>
-  <Content Remove="wwwroot\**\*" />
-</ItemGroup>
-<ItemGroup>
-  <None Include="wwwroot\**\*">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </None>
-</ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.4.462" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.0-preview.3.21201.13" />
+    <PackageReference Include="Microsoft.Maui" Version="0.0.1-alpha1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="0.0.1-alpha1" />
   </ItemGroup>
   <ItemGroup>
     <MauiImage Include="Resources\AppIcons\appicon.svg" ForegroundFile="Resources\AppIcons\appiconfg.svg" IsAppIcon="true" />
     <MauiImage Include="Resources\Images\*" />
     <MauiFont Include="Resources\Fonts\*" />
+    <Content Remove="wwwroot\**\*" />
+    <None Include="wwwroot\**\*">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
