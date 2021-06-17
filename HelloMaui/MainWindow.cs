@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Maui;
+﻿using Microsoft.Maui;
 
 namespace HelloMaui
 {
@@ -10,7 +9,7 @@ namespace HelloMaui
 
 		public MainWindow()
 		{
-			Page = App.Current.Services.GetService<MainPage>();
+			Page = new MainPage();
 		}
 	}
 }
